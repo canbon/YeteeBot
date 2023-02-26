@@ -1,0 +1,11 @@
+{
+  "name": "yeteebot",
+  "version": "1.0.0",
+  "description": "A bot that posts the new yetee shirts to discord every day.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moona",
+  "license": "ISC"
+}
