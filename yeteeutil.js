@@ -17,6 +17,10 @@ async function getShirts() {
             leftImg = `https:${leftShirt.find('.swiper-slide > a').attr('href')}`;
             rightImg = `https:${rightShirt.find('.swiper-slide > a').attr('href')}`;
         })
+        .catch(function (error) {
+            console.log('Error', error.message);
+            return null;
+        });
     return [leftImg, rightImg]
 }
 

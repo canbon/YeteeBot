@@ -37,6 +37,10 @@ client.once(Events.ClientReady,async c => {
         console.log('Running a job at 12:01 AM in Central Standard Time');
         //create and send embed to off-torchic
         shirts = await yeteeutil.getShirts();
+        if (shirts == null) {await interaction.reply(
+            "Something went wrong! Yop Yop!");
+            return
+        }
         //if you create multiple embeds and send them all at once you can force discord to post multi-image embeds! only the first embed should have a title or other attributes
         let embed1 = new EmbedBuilder().setTitle("Yop Yop! New Yetee shirts coming your way!").setURL('https://theyetee.com').setImage('https://someimagelink.jpg')
         let embed2 = new EmbedBuilder().setURL('https://theyetee.com').setImage(`${shirts[0]}`)
