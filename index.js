@@ -33,8 +33,8 @@ client.once(Events.ClientReady,async c => {
 	console.log(`Ready! Logged in as ${c.user.tag}`);
 
     //yetee daily post cron job
-    let yeteeSchedule = new cron.schedule('30 8 * * *', async function() {
-        console.log('Running a job at 8:30 AM in Central Standard Time');
+    let yeteeSchedule = new cron.schedule('1 0 * * *', async function() {
+        console.log('Running a job at 12:01 AM in Central Standard Time');
         //create and send embed to off-torchic
         shirts = await yeteeutil.getShirts();
         //if you create multiple embeds and send them all at once you can force discord to post multi-image embeds! only the first embed should have a title or other attributes

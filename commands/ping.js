@@ -10,6 +10,7 @@ module.exports = {
         let embed1 = new EmbedBuilder().setTitle("Yop Yop! New Yetee shirts coming your way!").setURL('https://theyetee.com').setImage('https://someimagelink.jpg')
         let embed2 = new EmbedBuilder().setURL('https://theyetee.com').setImage(`${shirts[0]}`)
         let embed3 = new EmbedBuilder().setURL('https://theyetee.com').setImage(`${shirts[1]}`)
-        await interaction.channel.send({embeds: [embed1, embed2, embed3]});
+        //TODO: change send to reply
+        await interaction.reply({embeds: [embed1, embed2, embed3]});
 	},
 };
